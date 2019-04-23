@@ -25,7 +25,7 @@ SECRET_KEY = 'tokxcib(u=7awm-xt*oqd+@+5(mo)ozd^_o^xlccy+$kz^hlca'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['osenga.me', 'opedia.com']
 
 
 # Application definition
