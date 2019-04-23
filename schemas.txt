@@ -1,0 +1,38 @@
+MODEL/DB FIELDS
+
+### LISTING
+id: INT
+researcher: INT (FOREIGN KEY [researcher])
+title: STR
+description: TEXT
+abstract: TEXT
+list_date: DATE
+listing_rating: INT [1]
+is_published: BOOL [true]
+research_paper: STR
+photo_main: STR
+photo_1: STR
+photo_2: STR
+photo_3: STR
+photo_4: STR
+
+
+### RESEARCHERS
+id: INT
+name: STR
+researcher_rating: INT [1]
+photo: STR
+description: TEXT
+email: STR
+phone: STR
+is_mvp: BOOL [0]
+lap_the_sun_day: DATE [since on_create]
+
+### CONTACT
+id: INT
+user_id: INT
+listing: INT
+listing_id: INT
+name: STR
+message: TEXT
+message_attachment: STR
