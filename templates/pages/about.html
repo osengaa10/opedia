@@ -37,9 +37,9 @@
       <div class="row">
         <div class="col-md-8">
           <h2>Searching For The Perfect Breakthrough</h2>
-          <p class="lead">An ever-evolving database of publications use a neural network to unearth new relationships among the vastness of published research.</p>
+          <p class="lead">An ever-evolving database of publications use a neural network to unearth new relationships among the vastness of scientific research. I don't believe in obnoxious ads and paywalls standing in the way of your search for knowledge. Everything here is free to view and download. All content is scanned for malware prior to being listed, ensuring the safety of your digital life. </p>
           <img src="{% static  'img/me.jpg' %}" alt="">
-          <p class="mt-4">I haven't found the meaning of life yet, and probably never will. Therefore I choose to spend my time here on Earth making it a better place than I found it.</p>
+          <p class="mt-4">I haven't found the meaning of life yet, and probably never will. Therefore I choose to spend my time trying to make earth a better place than I found it.</p>
         </div>
         <!-- <div class="col-md-4">
           {% if mvp_researchers %}
@@ -65,9 +65,9 @@
   <!-- Work -->
   <section id="work" class="bg-dark text-white text-center">
     <h2 class="display-4">Let Robots Work For You</h2>
-    <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem velit aperiam, unde aliquid at similique!</h4>
+    <h4>The machines do the dirty work while the humans reap the fruits of their labor.</h4>
     <hr>
-    <a href="listings.html" class="btn btn-secondary text-white btn-lg">View Our Featured Research</a>
+    <a href="{% url 'listings' %}" class="btn btn-secondary text-white btn-lg">View Our Featured Research</a>
   </section>
 
   <!-- Team -->
@@ -82,7 +82,7 @@
             <img src="{{ researcher.photo.url }}" alt="" class="rounded-circle mb-3">
             <h4>{{researcher.name}}</h4>
             <p class="text-success">
-              <i class="fas fa-award text-success mb-3"></i>Engineer</p>
+              <i class="fas fa-award text-success mb-3"></i> Guy who made this</p>
             <hr>
             <p>
               <i class="fas fa-phone"></i> {{ researcher.phone }}</p>
