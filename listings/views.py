@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from .models import Listing
 from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
 from .choices import journal_choices, rating_choices, keyword_match_choices
-
+from django.db.models import Q
 
 # Create your views here.
 def index(request):
@@ -33,8 +33,8 @@ def search(request):
         keywords = request.GET['keywords']
         print(keywords)
         if keywords:
-            queryset_list = queryset_list.filter(description__icontains=keywords) # finds a matching word in the abstract (not case sensitive)
-    #
+            #queryset_list = queryset_list.filter(description__icontains=keywords) # finds a matching word in the abstract (not case sensitive)
+            queryset_list = queryset_list.filter(Q(description__icontains=keywords) | Q(abstract__icontains=keywords))#
 
     context = {
         'keyword_match_choices': keyword_match_choices,
