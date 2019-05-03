@@ -8,7 +8,7 @@ class Researcher(models.Model):
     researcher_rating = models.IntegerField(default=1)
     photo = models.ImageField(upload_to='photos/%Y/%m/%d/', blank=True)
     description = models.TextField(blank=True)
-    email = models.CharField(max_length=50)
+    email = models.CharField(max_length=50, blank=True)
     phone = models.CharField(max_length=20)
     is_mvp = models.BooleanField(default=False)
     lap_the_sun_day = models.DateTimeField(default=datetime.now)

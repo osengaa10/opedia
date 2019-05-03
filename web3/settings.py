@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'listings.apps.ListingsConfig',
     'researchers.apps.ResearchersConfig',
     'accounts.apps.AccountsConfig',
+    'contacts.apps.ContactsConfig',
     'pages.apps.PagesConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -140,6 +141,9 @@ from django.contrib.messages import constants as messages
 MESSAGE_TAGS = {
     messages.ERROR: 'danger'
 }
+
+#Email config
+
 
 try:
     from .local_settings import *
